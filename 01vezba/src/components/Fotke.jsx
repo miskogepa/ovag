@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TiltedCard from "./TiltedCard";
+import ScrambledText from "./ScrambledText";
 
 function Fotke({ fotka }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -27,8 +28,18 @@ function Fotke({ fotka }) {
           overlayContent={
             isHovered && (
               <div className="p-4 text-white bg-amber-300 bg-opacity-50 rounded-lg">
-                <h3 className="text-lg font-bold">{fotka.title}</h3>
-                <p className="text-sm mb-2">{fotka.subtitle}</p>
+                <div className="text-center">
+                  <ScrambledText
+                    className="scrambled-text-demo text-lg font-bold"
+                    radius={50}
+                    duration={1.0}
+                    speed={0.3}
+                    scrambleChars=".:"
+                  >
+                    {fotka.title}
+                  </ScrambledText>
+                </div>
+                <p className="text-sm mb-2 mt-2">{fotka.subtitle}</p>
                 <p className="text-xs text-white">{fotka.description}</p>
               </div>
             )
