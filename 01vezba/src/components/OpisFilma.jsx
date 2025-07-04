@@ -20,9 +20,9 @@ function OpisFilma({ onBack }) {
 
   if (showGrid) {
     return (
-      <div className="flex flex-col items-center space-y-6 p-6">
-        {/* Grid od 6 polja (3x2) */}
-        <div className="grid grid-cols-3 gap-6 w-full max-w-4xl">
+      <div className="flex flex-col items-center space-y-6 p-4 sm:p-6">
+        {/* Responsive Grid - 1 kolona na telefonu, 2 na tablet-u, 3 na desktop-u */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-7xl">
           {fotkeData.map((fotka) => (
             <Fotke key={fotka.id} fotka={fotka} />
           ))}
@@ -31,7 +31,7 @@ function OpisFilma({ onBack }) {
         {/* Back to Description Button */}
         <button
           onClick={handleBackToDescription}
-          className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-400 transition-colors duration-300"
+          className="px-4 sm:px-6 py-2 sm:py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-400 transition-colors duration-300 text-sm sm:text-base"
         >
           Nazad na opis
         </button>
@@ -39,7 +39,7 @@ function OpisFilma({ onBack }) {
         {/* Back to Main Button */}
         <button
           onClick={onBack}
-          className="px-6 py-3 bg-amber-500 text-black font-bold rounded-lg hover:bg-amber-400 transition-colors duration-300"
+          className="px-4 sm:px-6 py-2 sm:py-3 bg-amber-500 text-black font-bold rounded-lg hover:bg-amber-400 transition-colors duration-300 text-sm sm:text-base"
         >
           Nazad na karticu
         </button>
