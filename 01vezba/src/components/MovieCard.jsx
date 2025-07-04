@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TiltedCard from "./TiltedCard";
+import slika from "../assets/Posternotebook.jpg";
 
 function MovieCard() {
   const [isHovered, setIsHovered] = useState(false);
@@ -11,7 +12,7 @@ function MovieCard() {
         onMouseLeave={() => setIsHovered(false)}
       >
         <TiltedCard
-          imageSrc="https://m.media-amazon.com/images/I/A1t8xCe9jwL._AC_UF1000,1000_QL80_.jpg"
+          imageSrc={slika}
           altText="The Notebook Movie Poster"
           captionText="The Notebook - Romance Drama"
           containerHeight="400px"
@@ -24,12 +25,12 @@ function MovieCard() {
           showTooltip={true}
           displayOverlayContent={true}
           overlayContent={
-            <div className="p-4 text-white bg-black bg-opacity-50 rounded-lg">
+            <div className="p-4 text-white bg-amber-300 bg-opacity-50 rounded-lg">
               <h3 className="text-lg font-bold">The Notebook</h3>
               {isHovered && (
                 <>
                   <p className="text-sm mb-2">Genre: Romance / Drama</p>
-                  <p className="text-xs text-gray-300">
+                  <p className="text-xs text-white">
                     A passionate love story between Noah and Allie, spanning
                     decades and overcoming social differences.
                   </p>
