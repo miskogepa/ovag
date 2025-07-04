@@ -23,17 +23,15 @@ function Fotke({ fotka }) {
           scaleOnHover={1.2}
           showMobileWarning={false}
           showTooltip={true}
-          displayOverlayContent={true}
+          displayOverlayContent={isHovered}
           overlayContent={
-            <div className="p-4 text-white bg-opacity-50 rounded-lg">
-              <h3 className="text-lg font-bold">{fotka.title}</h3>
-              {isHovered && (
-                <>
-                  <p className="text-sm mb-2">{fotka.subtitle}</p>
-                  <p className="text-xs text-white">{fotka.description}</p>
-                </>
-              )}
-            </div>
+            isHovered && (
+              <div className="p-4 text-white bg-amber-300 bg-opacity-50 rounded-lg">
+                <h3 className="text-lg font-bold">{fotka.title}</h3>
+                <p className="text-sm mb-2">{fotka.subtitle}</p>
+                <p className="text-xs text-white">{fotka.description}</p>
+              </div>
+            )
           }
         />
       </div>
