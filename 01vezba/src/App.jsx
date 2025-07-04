@@ -5,9 +5,19 @@ import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Particles from "./components/Particles";
 import MovieCard from "./components/MovieCard.jsx";
+import OpisFilma from "./components/OpisFilma.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [showDescription, setShowDescription] = useState(false);
+
+  const handleCardClick = () => {
+    setShowDescription(true);
+  };
+
+  const handleBackClick = () => {
+    setShowDescription(false);
+  };
 
   return (
     <>
@@ -49,7 +59,11 @@ function App() {
         >
           <Header />
           <div className="flex-1 flex items-center justify-center mt-8">
-            <MovieCard />
+            {showDescription ? (
+              <OpisFilma onBack={handleBackClick} />
+            ) : (
+              <MovieCard onCardClick={handleCardClick} />
+            )}
           </div>
         </div>
       </div>

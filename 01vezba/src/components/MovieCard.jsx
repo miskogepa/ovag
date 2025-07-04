@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TiltedCard from "./TiltedCard";
 import slika from "../assets/Posternotebook.jpg";
 
-function MovieCard() {
+function MovieCard({ onCardClick }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -10,6 +10,8 @@ function MovieCard() {
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={onCardClick}
+        className="cursor-pointer"
       >
         <TiltedCard
           imageSrc={slika}
