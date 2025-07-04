@@ -4,6 +4,7 @@ import TiltedCard from "./TiltedCard";
 import slika from "../assets/Posternotebook.jpg";
 import ova from "../assets/ova.jpg";
 import Fotke from "./Fotke";
+import { fotkeData, movieData } from "../data/data.js";
 
 function OpisFilma({ onBack }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -22,12 +23,9 @@ function OpisFilma({ onBack }) {
       <div className="flex flex-col items-center space-y-6 p-6">
         {/* Grid od 6 polja (3x2) */}
         <div className="grid grid-cols-3 gap-6 w-full max-w-4xl">
-          <Fotke />
-          <Fotke />
-          <Fotke />
-          <Fotke />
-          <Fotke />
-          <Fotke />
+          {fotkeData.map((fotka) => (
+            <Fotke key={fotka.id} fotka={fotka} />
+          ))}
         </div>
 
         {/* Back to Description Button */}
@@ -58,9 +56,9 @@ function OpisFilma({ onBack }) {
         className="cursor-pointer"
       >
         <TiltedCard
-          imageSrc={ova}
-          altText="The Notebook Movie Poster"
-          captionText="Jeco, volim te"
+          imageSrc={movieData.imageSrc}
+          altText={movieData.altText}
+          captionText={movieData.captionText}
           containerHeight="400px"
           containerWidth="300px"
           imageHeight="400px"
@@ -80,7 +78,7 @@ function OpisFilma({ onBack }) {
                   speed={0.5}
                   scrambleChars=".:"
                 >
-                  Jeco, volim te.
+                  {movieData.scrambledText}
                 </ScrambledText>
               </div>
             </div>
@@ -89,7 +87,7 @@ function OpisFilma({ onBack }) {
       </div>
 
       <div className="text-center text-white">
-        <h2 className="text-2xl font-bold mb-2"> Jeco, volim te.</h2>
+        <h2 className="text-2xl font-bold mb-2">{movieData.title}</h2>
       </div>
 
       {/* Back Button */}
