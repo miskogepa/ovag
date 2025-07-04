@@ -15,7 +15,7 @@ export const fotkeData = [
     captionText: "Uspomena 1",
     title: "Jeco, volim te.",
     description: "Opis prve fotografije",
-    subtitle: "Kolekcija fotografija",
+    subtitle: "Zajedno zauvek",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const fotkeData = [
     captionText: "Uspomena 2",
     title: "Druga fotografija",
     description: "Opis druge fotografije",
-    subtitle: "Kolekcija fotografija",
+    subtitle: "Zajedno zauvek",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const fotkeData = [
     captionText: "Uspomena 3",
     title: "Treća fotografija",
     description: "Opis treće fotografije",
-    subtitle: "Kolekcija fotografija",
+    subtitle: "Zajedno zauvek",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ export const fotkeData = [
     captionText: "Uspomena 4",
     title: "Četvrta fotografija",
     description: "Opis četvrte fotografije",
-    subtitle: "Kolekcija fotografija",
+    subtitle: "Zajedno zauvek",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ export const fotkeData = [
     captionText: "Uspomena 5",
     title: "Peta fotografija",
     description: "Opis pete fotografije",
-    subtitle: "Kolekcija fotografija",
+    subtitle: "Zajedno zauvek",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ export const fotkeData = [
     captionText: "Uspomena 6",
     title: "Šesta fotografija",
     description: "Opis šeste fotografije",
-    subtitle: "Kolekcija fotografija",
+    subtitle: "Zajedno zauvek",
   },
 ];
 
