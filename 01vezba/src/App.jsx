@@ -15,16 +15,6 @@ function App() {
         style={{ width: "100%", minHeight: "100vh", position: "relative" }}
         className="bg-gray-800"
       >
-        <Particles
-          particleColors={["#ffffff", "#ffffff"]}
-          particleCount={200}
-          particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
-          moveParticlesOnHover={true}
-          alphaParticles={false}
-          disableRotation={false}
-        />
         <div
           style={{
             position: "absolute",
@@ -32,6 +22,25 @@ function App() {
             left: 0,
             width: "100%",
             height: "100%",
+            zIndex: 1,
+          }}
+        >
+          <Particles
+            particleColors={["#ffffff", "#ffffff"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            minHeight: "100vh",
             zIndex: 10,
             display: "flex",
             flexDirection: "column",
