@@ -64,10 +64,10 @@ const ScrambledText = ({
   return (
     <div
       ref={rootRef}
-      className={`m-[7vw] max-w-[800px] font-mono text-[clamp(14px,4vw,32px)] text-white ${className}`}
+      className={`max-w-[400px] font-mono text-[clamp(16px,3vw,24px)] text-white flex items-center justify-center ${className}`}
       style={style}
     >
-      <p>{children}</p>
+      <p className="whitespace-nowrap">{children}</p>
     </div>
   );
 };
